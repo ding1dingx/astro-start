@@ -1,0 +1,30 @@
+{
+  "name": "astro-start",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format:check": "prettier --check . --plugin=prettier-plugin-astro",
+    "format": "prettier --write . --plugin=prettier-plugin-astro",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "astro": "^4.14.4",
+    "@astrojs/check": "^0.9.3",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.1.0",
+    "astro-eslint-parser": "^1.0.2",
+    "eslint": "^9.9.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "globals": "^15.9.0",
+    "lefthook": "^1.7.14",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript-eslint": "^8.1.0"
+  }
+}

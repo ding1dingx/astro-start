@@ -1,0 +1,19 @@
+# Ignore everything
+/*
+/src/content/**/*.md
+/src/content/docs/**/*
+
+# Except these files & folders
+!/.vscode
+!/.zed
+!/src
+!/public
+!/.github
+!tsconfig.json
+!astro.config.ts
+!astro.config.mjs
+!package.json
+!.prettierrc
+!.prettierrc.js
+!eslint.config.mjs
+!lefthook.yml

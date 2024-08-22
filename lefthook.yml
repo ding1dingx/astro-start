@@ -1,0 +1,40 @@
+commands:
+  lint: &lint_command
+    glob: '*.{js,ts,jsx,tsx,mjs,cjs,d.cts,d.mts,json,jsonc,astro}'
+    filter: '*.{js,ts,jsx,tsx,mjs,cjs,d.cts,d.mts,json,jsonc,astro}'
+    run: pnpm run lint
+
+  format-check: &format_check_command
+    glob: '*.{js,ts,jsx,tsx,mjs,cjs,d.cts,d.mts,json,jsonc,astro}'
+    filter: '*.{js,ts,jsx,tsx,mjs,cjs,d.cts,d.mts,json,jsonc,astro}'
+    run: pnpm run format:check
+
+  format: &format_command
+    glob: '*.{js,ts,jsx,tsx,mjs,cjs,d.cts,d.mts,json,jsonc,astro}'
+    filter: '*.{js,ts,jsx,tsx,mjs,cjs,d.cts,d.mts,json,jsonc,astro}'
+    run: |
+      pnpm run format
+      git add
+    stage_fixed: true
+
+pre-push:
+  commands:
+    lint:
+      <<: *lint_command
+
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      <<: *lint_command
+    format:
+      <<: *format_command
+      stage_fixed: true
+
+check:
+  parallel: true
+  commands:
+    lint:
+      <<: *lint_command
+    format-check:
+      <<: *format_check_command

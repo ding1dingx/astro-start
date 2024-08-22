@@ -1,0 +1,31 @@
+{
+  "formatter": "auto",
+  "format_on_save": "on",
+  "tab_size": 2,
+  "hard_tabs": false,
+  "preferred_line_length": 100,
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  // Zed's Prettier integration settings.
+  "prettier": {
+    "allowed": true,
+    "plugins": ["prettier-plugin-astro", "@prettier/plugin-xml", "..."],
+    // Format config
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "es5",
+    "arrowParens": "avoid",
+    "endOfLine": "lf",
+    "printWidth": 100
+  },
+  "languages": {
+    "Markdown": {
+      "format_on_save": "off",
+      "remove_trailing_whitespace_on_save": false
+    }
+  }
+}
