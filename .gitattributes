@@ -7,4 +7,4 @@
 *.webp binary
 
 # Linguist language overrides
-**/.zed/**/*.json linguist-language=JSONC
+*.json linguist-language=JSONC
