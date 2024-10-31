@@ -2,17 +2,27 @@
  * @see https://prettier.io/docs/en/configuration.html
  * @type {import("prettier").Config}
  */
-const config = {
-  tabWidth: 2,
-  useTabs: false,
-  semi: true,
+module.exports = {
+  arrowParens: 'avoid',
+  bracketSameLine: false,
+  bracketSpacing: true,
+  semi: false,
+  experimentalTernaries: false,
   singleQuote: true,
   jsxSingleQuote: true,
-  bracketSpacing: true,
+  quoteProps: 'as-needed',
   trailingComma: 'es5',
-  arrowParens: 'avoid',
+  singleAttributePerLine: false,
+  htmlWhitespaceSensitivity: 'css',
+  vueIndentScriptAndStyle: false,
+  proseWrap: 'preserve',
+  insertPragma: false,
+  requirePragma: false,
+  tabWidth: 2,
+  useTabs: false,
   endOfLine: 'lf',
   printWidth: 100,
+  embeddedLanguageFormatting: 'auto',
   plugins: ['prettier-plugin-astro'],
   overrides: [
     {
@@ -22,6 +32,4 @@ const config = {
       },
     },
   ],
-};
-
-module.exports = config;
+}
